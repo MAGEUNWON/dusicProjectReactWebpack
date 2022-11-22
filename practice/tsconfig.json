@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "../test/Styled.jsx", "../test/Props.js", "../test/Hi.js", "../test/Hello.js"  ]
 }

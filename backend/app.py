@@ -1,12 +1,13 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS 
-from config import db
+# from config import db
 from models import DataRoute
 
 app = Flask(__name__)
-app.config['JONS_AS_ASCII'] = False
+app.config['JSON_AS_ASCII'] = False
 
 CORS(app)
+
 
 @app.route('/<market>', methods=['GET'])
 def allSearch(market):
