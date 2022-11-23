@@ -1,10 +1,12 @@
-import Header from "./Header"
+import styled from '../Theme/themed-components'
+import { useState, useEffect } from 'react'
+import Header from "./Header";
 import Section1 from "./Section1"
 
 const Layout = () =>{
   return(
     <>
-      <Header />
+      <Header getStockType={getStockType}></Header>
       <div>
         <main>
 
