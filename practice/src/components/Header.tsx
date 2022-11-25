@@ -54,16 +54,12 @@ const HeaderSet = styled.header`
   }
 `;
 
-interface outProps {
-  getStockType: (Type: string) => void;
-}
-// 부모한테 받을 props를 정의. 자식에서 정의를 해놓고 부모한테 받음?
 
-const Header: React.FunctionComponent<outProps> = ({getStockType})=>{
+const Header = ({name}:{name:(Type:string)=>void})=>{
   const Typeget = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    getStockType(e.target.value);
+    name(e.target.value);
   
-};
+  };
 
 
   return (

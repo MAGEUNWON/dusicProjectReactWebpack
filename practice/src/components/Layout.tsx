@@ -3,10 +3,21 @@ import { useState, useEffect } from 'react'
 import Header from "./Header";
 import Section1 from "./Section1"
 
+interface getName {
+  (type:string) : void
+}
+
+
 const Layout = () =>{
+
+    const [name, setName] = useState("KOSPI");
+    const getStockType :getName = (type) => {
+      setName(type)
+    }
+    console.log(name)
   return(
     <>
-      <Header getStockType={getStockType}></Header>
+      <Header name={getStockType}></Header>
       <div>
         <main>
 
