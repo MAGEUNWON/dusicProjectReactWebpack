@@ -1,4 +1,4 @@
-import * as sytledComponents from 'styled-components';
+import * as sytledComponents from 'styled-components'
 
 import { Theme } from './theme';
 

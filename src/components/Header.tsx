@@ -65,7 +65,7 @@ const Header = ({name}:{name:(Type:string)=>void})=>{
   return (
     <>
       <HeaderSet>
-        <img src="./assets/Logo.png" alt="logo"></img>
+        <img src="/asset/Logo.png" alt="logo"></img>
         <div>
           <select onChange={Typeget}>
             <option value={'kospi'}>KOSPI</option>

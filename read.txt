@@ -1,0 +1,1 @@
+차트 쓸 거면 npm install recharts 해줘야 함. 
