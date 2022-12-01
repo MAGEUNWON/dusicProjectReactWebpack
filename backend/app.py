@@ -6,8 +6,8 @@ from models import DataRoute
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
 
-CORS(app)
-
+CORS(app,resources={r'*':{'origins':'http://localhost:3000'}},supports_credentials=True)
+# cors에러나서 설정 해준 것. frontend 서버인 localhost 3000번 에서만 데이터 띄우라고 해준 것
 
 @app.route('/<market>', methods=['GET'])
 def allSearch(market):
@@ -17,6 +17,12 @@ def allSearch(market):
 @app.route('/getnames', methods = ['POST'])
 def getname():
     data = DataRoute.getname()
+    print(data)
+    return jsonify(data)
+
+@app.route('/daydata/<name>', methods = ['GET'])
+def getday(name):
+    data = DataRoute.getDay(name)
     print(data)
     return jsonify(data)
 
