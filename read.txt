@@ -1,1 +1,3 @@
 차트 쓸 거면 npm install recharts 해줘야 함. 
+webpack 포트 3000 번 해주기
+backend 서버랑 front 서버랑 둘다 띄워야 함. backend 서버부터 띄우고 front 띄우기

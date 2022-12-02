@@ -11,7 +11,7 @@ module.exports = merge(common, {
     open: true,
     hot: true, //테스트 구동과 동시에 기본페이지가 오픈됨
     compress: true,
-    port: 3005,
+    port: 3000,
     historyApiFallback: true, //다중 엔트리 일 때 시작시 기본 사용할 페이지를 지정해 줄 수 있음. 
     liveReload: true,
   },
