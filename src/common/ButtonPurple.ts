@@ -7,20 +7,17 @@
 
 import styled from 'styled-components';
 
-export const ButtonMint = styled.button<{width: String}>`
-  width: 50px;
+export const ButtonSetPurle = styled.button`
+  height: 50px;
   background-color: transparent;
-  border: none;
-  border-radius: 1rem;
+  ${(props) => props.theme.border.borderSet}
   font-size: ${(props) => props.theme.fontSize.font_28};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: ease 0.3s;
+  ${(props) => props.theme.flex.flexCenter.flexCenter}
   padding: 0 10px;
+  transition: ease-out 0.3s;
   cursor: pointer;
   color: ${(props) => props.theme.color.black};
-  &:hover{
+  &.active {
     background-color: ${(props) => props.theme.color.main};
     color: rgba(255, 255, 255, 1);
   }

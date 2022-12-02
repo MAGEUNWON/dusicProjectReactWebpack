@@ -1,4 +1,4 @@
-import styled from '../Theme/themed-components'
+import styled from 'styled-components'
 import { useState, useEffect } from 'react'
 import Header from "./Header";
 import Loading from '@/common/Loading';

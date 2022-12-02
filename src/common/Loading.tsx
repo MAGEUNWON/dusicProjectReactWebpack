@@ -1,5 +1,5 @@
-import { keyframes, Keyframes } from "styled-components";
-import styled from "@/Theme/theme-set";
+import { keyframes } from "styled-components";
+import styled from "@/Theme/theme_set";
 
 const turnning = keyframes`
 0%{

@@ -22,6 +22,13 @@ const fontSize: {[key: string]: string} = {
   font_50: '5rem'
 };
 
+const border = {
+  borderSet: `
+    border : none;
+    border-radius : 1rem;
+  `,
+};
+
 const fontWeight: {[key: string]: string} = {
   DemiLight: '300',
   Regular: '400',
@@ -29,10 +36,34 @@ const fontWeight: {[key: string]: string} = {
   Bold: '700',
 };
 
+const flex = {
+  flexCenter: `
+    display : flex;
+    justify-content : center;
+    align-items: center;
+  `,
+  flexCenterColumn: `
+    display : flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+  `,
+  flexSpacebetween: `
+    display: flex;
+    justify-content: space-between;
+  `,
+  flexColumn: `
+    display:flex;
+    flex-direction:column;
+  `,
+};
+
 const theme = {
   color,
   fontSize,
   fontWeight,
+  border,
+  flex
 };
 
 export type Theme = typeof theme;

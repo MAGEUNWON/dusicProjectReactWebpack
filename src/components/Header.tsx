@@ -55,11 +55,19 @@ const HeaderSet = styled.header`
 `;
 
 
-const Header = ({name}:{name:(Type:string)=>void})=>{
-  const Typeget = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    name(e.target.value);
+// const Header = ({name}:{name:(Type:string)=>void})=>{
+//   const Typeget = (e: React.ChangeEvent<HTMLSelectElement>) => {
+//     name(e.target.value);
   
+//   };
+
+//부모한테 받을 props를 정의함(자식에서 정의를 해놓아야 부모한테서 받을수 있나봄)
+
+const Header = ({ getStockType }: { getStockType: (Type: string) => void }) => {
+  const Typeget = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    getStockType(e.target.value);
   };
+  // select에 onChange가 일어날 때 select value  값을 부모 컴포넌트에 보냄
 
 
   return (
