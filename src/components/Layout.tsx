@@ -57,6 +57,7 @@ const Layout = () => {
   const [StockType, setSTockType] = useState<string>('kospi');
   const [loading, setLoading] = useState<boolean>(true);
   const [data, getData] = useState<DataObject[]>([]);
+  const [searchData, setSearchData] = useState<any>(null);
 
   const getStockType = (Type: string) => {
     setSTockType(Type);
@@ -97,13 +98,16 @@ const Layout = () => {
   return (
     <>
       <Main>
-        <Header getStockType={getStockType}></Header>
+        <Header 
+          getStockType={getStockType}
+          setSearchData = {setSearchData}
+          ></Header>
         {loading ? (
           <Loading></Loading>
         ) : data && StockType === 'kospi' ? (
-          <Section1 volume={setvolume}></Section1>
+          <Section1 volume={setvolume} data={searchData}></Section1>
         ) : (
-          <Section1 volume={setvolume}></Section1>
+          <Section1 volume={setvolume} data={searchData}></Section1>
         )}
       </Main>
     </>

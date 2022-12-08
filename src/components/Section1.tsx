@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import Selectstock from '@/common/SelectStock';
 import { ButtonSetPurle } from '@/common/ButtonPurple';
 import List from './Section1_con/List';
@@ -42,12 +42,16 @@ interface btn1 {
   con: string;
 }
 
-const Section1 = ({ volume }: { volume: any }) => {
+const Section1 = ({ volume, data }: { volume: any; data: any }) => {
   const [sorting, getSorting] = useState<string>('volume');
   const [index, getIndex] = useState<number>(0);
   const [nameData, getNameData] = useState<any[]>();
 
   volume.sort((a: any, b: any) => b[index][sorting] - a[index][sorting]);
+
+  useEffect(() => {
+    getNameData(undefined);
+  }, [data])
 
   // 리스트 버튼 클릭시 버튼의 value값을 받아서 sort
   const setSort = useCallback(
@@ -118,11 +122,11 @@ const Section1 = ({ volume }: { volume: any }) => {
             )}
           </div>
         </div>
-        {nameData !== undefined ? (
+        {nameData !== undefined || data !== null ? (
           <div>
             <div>
-              <Stockinfo StockData={nameData} />
-              <StockDeal StockData={nameData} />
+              <Stockinfo StockData={nameData || data} />
+              <StockDeal StockData={nameData || data} />
             </div>
           </div>
         ) : (

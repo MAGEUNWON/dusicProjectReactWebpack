@@ -26,5 +26,15 @@ def getday(name):
     print(data)
     return jsonify(data)
 
+@app.route('/getsearch/<name>',methods=['GET'])
+def getSearch(name):
+    data= DataRoute.getSearch(name)
+    return jsonify(data)
+
+@app.route('/getsearchinput/<name>',methods=['GET'])
+def getSearchInput(name):
+    data = DataRoute.getSearchInput(name)
+    return jsonify(data)
+
 if __name__ == '__main__':
     app.run(debug=True)
