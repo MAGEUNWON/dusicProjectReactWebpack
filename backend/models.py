@@ -1,6 +1,6 @@
-from flask import Flask, jsonify, request, json 
+from flask import request
 from config import cursor
-from config import db 
+# from config import db 
 
 
 
