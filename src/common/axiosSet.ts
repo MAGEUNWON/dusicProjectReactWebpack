@@ -12,12 +12,12 @@ import axios from "axios";
 //axiosSet이라는 인스턴스 생성. 전역적으로 사용할 수 있음. 
 const axiosSet = axios.create({
   baseURL: 'http://localhost:5000',
-  headers: {
-    'Content-Type' : 'application/json',
-  },
+  // headers: {
+  //   'Content-Type' : 'application/json',
+  // }, 
   withCredentials: true,
 });
 
 export default axiosSet; //axios 인스턴스를 내보냄. 
 //중간에 다른 URL로 요청해야 하는 경우 axios.create를 통해 커스텀 객체를 만들어 사용할 수 있음. 
-//미리 url 설정된 상태로 만들어 놓고 이 인스터스를 가져와서 쓰면 됨. axiosSet 객체를 통한 axios 요청은 언제가 저 baseURL이 붙게되며 다른 요청과 구별할 수 있음. 
+//미리 url 설정된 상태로 만들어 놓고 이 인스터스를 가져와서 쓰면 됨. axiosSet 객체를 통한 axios 요청은 언제나 저 baseURL이 붙게되며 다른 요청과 구별할 수 있음. 

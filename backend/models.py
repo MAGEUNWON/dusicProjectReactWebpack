@@ -16,8 +16,8 @@ class DataRoute():
             code = res[i]["code"]
             
             # sql = (f"SELECT companylist.code AS code, market, name, high, low, close, volume, day, ROUND((high+low)/2,1) AS mid, ROUND((((high+low)/2)*0.04),2) AS medomesu FROM {market}_{code}_d AS res INNER JOIN companylist ON companylist.code = res.code WHERE day BETWEEN date("2022-01-27") AND date("2022-01-28")+1 ORDER BY day DESC LIMIT 2")
-            cursor.execute(f'SELECT companylist.code AS code,market,name,high,low,close,volume,day,ROUND((high+low)/2,1) AS mid, ROUND((((high+low)/2)*0.04),2) AS medomesu FROM {market}_{code}_d AS res INNER JOIN companylist ON companylist.code = res.code WHERE day BETWEEN date("2022-01-27") AND date("2022-01-28")+1 ORDER BY day DESC LIMIT 2')
-            res2 = cursor.fetchall()
+            cursor.execute(f'SELECT companylist.code AS code,market,name,high,low,close,volume,day,ROUND((high+low)/2,1) AS mid, ROUND((((high+low)/2)*0.04),2) AS medomesu FROM {market}_{code}_d AS res INNER JOIN companylist ON companylist.code = res.code WHERE day BETWEEN date("2022-01-27") AND date("2022-01-28")+1 ORDER BY day DESC LIMIT 2') #sql 문장을 실행
+            res2 = cursor.fetchall() #조회된 결과 모두를 리스트형태로 반환 데이터가 없는 경우 빈리스트를 반환
             data_stack.append(res2)
         return data_stack
 
