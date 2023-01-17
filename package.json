@@ -19,7 +19,7 @@
     "package": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "recharts": "^2.1.16",
+    "recharts": "^2.3.2",
     "styled-components": "^5.3.6",
     "styled-reset": "^4.4.2"
   },

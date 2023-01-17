@@ -1,3 +1,7 @@
 차트 쓸 거면 npm install recharts 해줘야 함. 
 webpack 포트 3000 번 해주기
 backend 서버랑 front 서버랑 둘다 띄워야 함. backend 서버부터 띄우고 front 띄우기
+
+backend 서버 - 그냥 5000번 들어가면 처음에 404로 나옴. 
+뒤에 /kospi or kosdak 등 주소 더 써주면 맞게 넘어감
+front 서버  - npm run dev 해주면 됨
